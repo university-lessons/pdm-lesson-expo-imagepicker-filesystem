@@ -27,3 +27,25 @@ Configure plugin in `app.json`:
   }
 }
 ```
+
+# Usage
+
+Get 'ImageStorage.js` from [src/services/ImageStorage.js](src/services/ImageStorage.js)
+
+To **load** saved image from FileSystem (returns base64 image or null if filename not exists):
+
+`const loadedImage = await ImageStorage.loadImageAsync(filename);`
+
+To **get and store** an image from Camera to FileSystem (returns base64 image or null if failed):
+
+`const storedImage = await ImageStorage.storeImageAsync(filename, true);`
+
+To **get and store** an image from MediaLibrary to FileSystem (returns base64 image or null if failed):
+
+`const storedImage = await ImageStorage.storeImageAsync(filename, false);`
+
+To **delete** a saved image:
+
+`await ImageStorage.deleteImageAsync(filename);`
+
+Check [App.js](App.js) for complete example.
