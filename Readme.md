@@ -1,4 +1,6 @@
-# Expo ImagePicker Example
+# Expo ImagePicker with Local FileSystem Storage
+
+This example uses ImagePicker to get images from Camera or MediaLibrary and store them on expo FileSystem.
 
 ## Setup
 
